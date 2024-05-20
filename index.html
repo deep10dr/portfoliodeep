@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background-color: black;">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navTabs = document.querySelectorAll('.navtab');
+            const contents = document.querySelectorAll('.content');
+
+            navTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    navTabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    const target = tab.getAttribute('data-target');
+                    contents.forEach(content => {
+                        if (content.id === target) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <nav class="navtabs">
+        <div class="name">Deepak S</div>
+        <div class="navtab active" data-target="home"><a href="#home">Home</a></div>
+        <div class="navtab" data-target="about"><a href="#about">About</a></div>
+        <div class="navtab" data-target="study"><a href="#study">Studies</a></div>
+        <div class="navtab" data-target="skills"><a href="#page4">Skills</a></div>
+        <div class="navtab" data-target="contact"><a href="#page5">Contact</a></div>
+    </nav>
+
+    <section id="home" class="content active">
+        <img src="deepak (2).jpeg" alt="Deepak S">
+        <div>
+            <h1 id="doc">Deepak S</h1>
+            <h2>__________FRONT END DEVELOPER..</h2>
+            <p>Hello world! I am working with my hands to create magic on the internet and Code is my brush, and the web is my canvas.</p>
+        </div>
+    </section>
+
+    <section id="about" class="content">
+        <header>
+            <h1>About Me</h1>
+            <h3>MY Introduction</h3>
+        </header>
+        <div class="content-page">
+            <p> > I'm Deepak S, currently pursuing BE Computer Science and Engineering in KSR College of Engineering, Tiruchengode.</p>
+            <p> > Some positive things I find in myself are positive thoughts, bringing innovative ideas and solutions to the table, making projects and tasks more engaging and effective.</p>
+            <p> > My hobbies are listening to music, programming, playing video games.</p>
+            <p> > I want to become a Frontend Developer. I'm enhancing my coding and designing skills day by day.</p>
+        </div>
+    </section>
+
+    <section id="study" class="content">
+        <div class="head"><h1>Studies</h1></div>
+        <div class="education">
+            <div>
+                <header>B.E CSE</header>
+                <p>Pursuing B.E-Computer Science and Engineering in KSR College of Engineering</p>
+                <p>Tiruchengode, Namakkal District</p>
+                <p>Tamilnadu</p>
+                <p>CGPA: 8.1</p>
+                <img src="be.png" alt="B.E CSE">
+            </div>
+            <div>
+                <header>HSC</header>
+                <p>Completed Higher Secondary School Certificate at G.H.S.S At Mecheri</p>
+                <p>Salem District</p>
+                <p>Tamilnadu</p>
+                <p>Percentage: 82%</p>
+                <img src="12th.png" alt="HSC">
+            </div>
+            <div>
+                <header>SSLC</header>
+                <p>Completed Secondary School Leaving Certificate at G.H.S.S At Mecheri</p>
+                <p>Salem District</p>
+                <p>Tamilnadu</p>
+                <p>Percentage: 74.5%</p>
+                <img src="10th.png" alt="SSLC">
+            </div>
+        </div>
+    </section>
+
+    <section id="page4" class="content">
+        <div class="head"><h1>Skills</h1></div>
+        <div class="outer">
+            <div class="inner-1">
+                <div><img src="html.png" class="img-paace" alt="HTML"><p>Advanced</p></div>
+                <div><img src="css.png" class="img-paace" alt="CSS"><p>Advanced</p></div>
+                <div><img src="js.png" class="img-paace" alt="JavaScript"><p>Intermediate</p></div>
+            </div>
+            <div class="inner-2">
+                <h2 style="padding: 20px;">Development Tools:</h2>
+                <div class="container" style="display: flex; flex-direction: row; justify-content: center; align-items: center; justify-content: space-around;">
+                    <div><img src="vs.png" class="img-paace" alt="VS Code"><p>Visual Studio Code</p></div>
+                    <div><img src="ec.png" class="img-paace" alt="Eclipse"><p>Java Eclipse</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page5" class="content">
+        <div class="con">
+            <h1>Contact Me:</h1>
+            <div class="inner">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="Name" id="name">
+                </div>
+                <br>
+                <div>
+                    <label for="mail">Email:</label>
+                    <input type="email" placeholder="name@mail.com" id="mail">
+                </div>
+                <br>
+                <div>
+                    <label for="des">Message:</label>
+                    <textarea id="des" placeholder="Leave a comment..."></textarea>
+                </div>
+                <br>
+                <div><button>SUBMIT</button></div>
+            </div>
+        </div>
+        <div class="outer">
+            <div><a href="#"><img src="f.png" alt="Facebook"></a><span>Facebook</span></div>
+            <div><a href="#"><img src="i.png" alt="Instagram"></a><span>Instagram</span></div>
+            <div><a href="#"><img src="li.png" alt="LinkedIn" style="width: 40px; height: 40px;"></a><span>LinkedIn</span></div>
+            <div><a href="#"><img src="m.png" alt="Email" style="width: 40px; height: 40px;"></a><span>deep@gmail.com</span></div>
+            <div><a href="#"><img src="w.png" alt="WhatsApp"></a><span>8015744859</span></div>
+            <div><a href="#"><img src="c.png" alt="Contact"></a><span>+91-8015744859</span></div>
+        </div>
+        <div class="bo">
+            <p>&copy; 2024 By Deepak S</p>
+        </div>
+    </section>
+</body>
+
+</html>
