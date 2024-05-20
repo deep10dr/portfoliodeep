@@ -11,7 +11,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: transparent;
     overflow-x: hidden;
-    overflow-y:hidden;
     transition: 0.10s;
 }
 
@@ -306,14 +305,19 @@ html {
 
 #page4 .head h1 {
     font-size: 40px;
+    &:hover{
+        animation-name: head;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
 }
 
 .outer {
     display: flex;
     flex-direction: column;
     height: 450px;
-    width: 1000px;
-    margin-left: 12%;
+    width: 100%;
+    margin-left: 8%;
     margin-top: 1%;
     gap: 20px;
     padding: 20px;
@@ -322,13 +326,16 @@ html {
 
 .inner-1 {
     height: 200px;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     justify-content: space-around;
 }
+.inner-1 > div > p{
+    visibility: hidden;
+} 
 
 .inner-1 > div {
     display: flex;
@@ -344,6 +351,35 @@ html {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    &>p{
+    visibility:visible;
+    color:  #007BFF;
+    font-size: 24px;
+} 
+}
+.inner-2 {
+    height: 200px;
+    width: 70%;
+
+}
+.inner-2 > div{
+     padding: 10px;
+}
+.inner-2 .container > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+}
+.inner-2 .container > div:hover{
+    box-shadow: 0px 0px 2px 1px black;
+     flex-direction: row;
+     flex-grow: 0.2;
+     justify-content: space-around;
+     transition: 0.6s all ease;
+
 }
 
 /* Page 5 */
@@ -492,4 +528,34 @@ html {
 .img-paace {
     height: 80px;
     width: 80px;
+    opacity: 0.9;
+}
+.img-paace:hover{
+    transform: rotate(4deg);
+    opacity: 1;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+@keyframes head{
+  0%{
+         transform: rotate(4deg);
+         transition: 0.2s all;
+  }
+  25%{
+                 transform: rotate(8deg);
+         transition: 0.2s all;
+  }
+  50%{
+                   transform: rotate(0deg);
+         transition: 0.2s all;
+  }
+  75%{
+                 transform: rotate(-4deg);
+         transition: 0.2s all;
+  }
+  100%{         transform: rotate(-8deg);
+         transition: 0.2s all;
+
+  } 
 }
