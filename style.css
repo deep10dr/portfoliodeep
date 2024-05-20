@@ -11,6 +11,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: transparent;
     overflow-x: hidden;
+    overflow-y:hidden;
     transition: 0.10s;
 }
 
